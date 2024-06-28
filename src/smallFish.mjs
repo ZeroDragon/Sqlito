@@ -13,8 +13,7 @@ class SmallFish {
   get = (key) => {
     if (this.memory[key] && this.memory[key].ttl) {
       if (Date.now() - this.memory[key].timestamp > this.memory[key].ttl) {
-        delete this.memory[key]
-        return null
+        return this.del(key)
       }
     }
     return this.memory[key] || null
@@ -22,6 +21,7 @@ class SmallFish {
 
   del = (key) => {
     delete this.memory[key]
+    return null
   }
 }
 
