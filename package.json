@@ -2,16 +2,12 @@
   "name": "sqlito",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "main": "src/indexer.mjs",
+  "scripts": {},
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "standard": "^17.1.0"
   },
-  "dependencies": {
-    "js-yaml": "^4.1.0"
-  }
+  "dependencies": {}
 }
