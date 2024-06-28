@@ -1,7 +1,7 @@
 SQLITO
 ==================
 
-Sqlito [ese ku li toh]. Is a flat file parser in memory. It was created to be used in tandem with SiteCraft,
+Sqlito [ese ku li toh]. Is a flat file parser in memory. It was created to be used in tandem with [SiteCraft](https://github.com/ZeroDragon/SiteCraft),
 which saves all posts in MD files separated into two parts eachfile by 2 newlines:
 
 - First part is a YAML section with meta information about the post
