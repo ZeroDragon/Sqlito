@@ -71,11 +71,8 @@ app.get('/tag/:tag', (req, res) => {
   res.json(entries)
 })
 
-app.get('/search/:term', (req, res) => {
-  const { term } = req.params
-  const entries = sqlito.allWithText(term)
-  res.json(entries)
-})
+// since Sqlito does not uses promises, it can be set directly into response
+app.get('/search/:term', (req, res) => res.json(sqlito.allWithText(req.params.term)))
 
 app.listen(process.env.PORT, () => {
   console.log(`Server running at http://localhost:${process.env.PORT}/`)
