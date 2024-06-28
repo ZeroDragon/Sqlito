@@ -2,6 +2,15 @@ class SmallFish {
   constructor (ttl = 86.4e6) {
     this.memory = {}
     this.ttl = ttl
+    this.timer = setInterval(() => {
+      Object.keys(this.memory).forEach((key) => {
+        if (this.memory[key].ttl) {
+          if (Date.now() - this.memory[key].timestamp > this.memory[key].ttl) {
+            delete this.memory[key]
+          }
+        }
+      })
+    }, 3e5)
   }
 
   set = (params) => {
@@ -11,17 +20,7 @@ class SmallFish {
   }
 
   get = (key) => {
-    if (this.memory[key] && this.memory[key].ttl) {
-      if (Date.now() - this.memory[key].timestamp > this.memory[key].ttl) {
-        return this.del(key)
-      }
-    }
     return this.memory[key] || null
-  }
-
-  del = (key) => {
-    delete this.memory[key]
-    return null
   }
 }
 
