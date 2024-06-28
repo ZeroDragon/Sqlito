@@ -41,7 +41,7 @@ CSS significa Hojas de Estilo en Cascada. Es un lenguaje utilizado para describi
 ### Parsed Data:
 ```javascript
 [
-  // location will resolve from path/to/psots/<filename>.md whish SiteCraft uses as path
+  // location will resolve from path/to/posts/<filename>.md whish SiteCraft uses as path
   "location": "css",
   "title": "CSS",
   "excerpt": "CSS significa Hojas de Estilo en Cascada",
